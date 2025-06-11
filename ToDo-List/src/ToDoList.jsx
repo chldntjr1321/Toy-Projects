@@ -1,10 +1,17 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ToDoItem from './ToDoItem';
 
 function ToDoList() {
-  let [item, setItem] = useState([]);
+  let [item, setItem] = useState(() => {
+    const saved = localStorage.getItem('todoItems');
+    return saved ? JSON.parse(saved) : [];
+  });
   let [input, setInput] = useState('');
   let [isComposing, setIsComposing] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem('todoItems', JSON.stringify(item));
+  }, [item]);
 
   const inputvalue = (e) => {
     setInput(e.target.value);
