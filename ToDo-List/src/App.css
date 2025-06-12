@@ -30,6 +30,7 @@ body {
 .addBtn {
   margin-left: 5px;
   border-radius: 10%;
+  cursor: pointer;
 }
 .list {
   display: flex;
@@ -43,4 +44,5 @@ body {
 .btnbox {
   display: flex;
   gap: 5px;
+  cursor: pointer;
 }

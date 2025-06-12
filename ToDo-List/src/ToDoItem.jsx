@@ -24,8 +24,8 @@ function AddList(props) {
       <div className="list">
         {props.i + 1}. {props.todo}
         <div className="btnbox">
-          <button onClick={() => {}}>✏️</button>
-          <button
+          {/* <span onClick={() => {}}>✏️</span> */}
+          <span
             onClick={() => {
               const changeitem = [...props.item];
               changeitem.splice(props.i, 1);
@@ -33,7 +33,7 @@ function AddList(props) {
             }}
           >
             ❌
-          </button>
+          </span>
         </div>
       </div>
     </>

@@ -49,14 +49,14 @@ function ToDoList() {
           onCompositionStart={() => setIsComposing(true)}
           onCompositionEnd={() => setIsComposing(false)}
         />
-        <button
+        <span
           className="addBtn"
           onClick={() => {
             activeBtn();
           }}
         >
           ➕
-        </button>
+        </span>
       </div>
       <ToDoItem item={item} setItem={setItem} />
     </>
